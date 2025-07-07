@@ -5,6 +5,7 @@ class YoutubeLinkValidator:
     """
     Проверка, что ссылка в поле ведет на ресурс youtube.com
     """
+
     def __init__(self, field):
         self.field = field
 

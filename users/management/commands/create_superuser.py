@@ -6,13 +6,12 @@ class Command(BaseCommand):
     """
     Создание администратора
     """
+
     def handle(self, *args, **options):
 
         User = get_user_model()
         user = User.objects.create(
-            email=options["email"],
-            first_name=options["first_name"],
-            last_name=options["last_name"]
+            email=options["email"], first_name=options["first_name"], last_name=options["last_name"]
         )
 
         user.set_password("12345")

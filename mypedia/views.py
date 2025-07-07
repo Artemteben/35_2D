@@ -16,6 +16,7 @@ class CourseViewSet(viewsets.ModelViewSet):
     """
     Вьюсет для CRUD операций с моделью Course
     """
+
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
     pagination_class = CoursePaginator
@@ -71,6 +72,7 @@ class LessonListCreateAPIView(generics.ListCreateAPIView):
     """
     Дженерик для отображения списка и создания нового объекта Lesson:
     """
+
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
     pagination_class = LessonPaginator
@@ -109,6 +111,7 @@ class LessonRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     """
     Дженерик для просмотра, редактирования и удаления объекта Lesson:
     """
+
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
 
@@ -140,6 +143,7 @@ class SubscriptionListCreateAPIView(generics.ListCreateAPIView):
     """
     Дженерик для отображения списка и создания нового объекта Subscription:
     """
+
     queryset = Subscription.objects.all()
     serializer_class = SubscriptionSerializer
 
@@ -162,6 +166,7 @@ class SubscriptionRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPI
     """
     Дженерик для просмотра, редактирования и удаления объекта Subscription:
     """
+
     queryset = Subscription.objects.all()
     serializer_class = SubscriptionSerializer
 

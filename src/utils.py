@@ -21,8 +21,9 @@ def create_stripe_product(instance):
     """
     Создания продукта в stripe
     """
-    instance_name = f"Оплата курса {instance.course.name}" if instance.course \
-        else f"Оплата урока {instance.lesson.name}"
+    instance_name = (
+        f"Оплата курса {instance.course.name}" if instance.course else f"Оплата урока {instance.lesson.name}"
+    )
     return stripe.Product.create(name=instance_name)
 
 
